@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(162, 209, 222);
+}
+
+.wrap {
+  background: rgb(218, 233, 243);
+  width: 700px;
+  margin: 0 auto;
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-top: 200px;
+  height: 600px;
+}
+
+.wrap h1 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative; 
+  }
+  
+  .wrap h1::after {
+    content: ''; 
+    position: absolute;
+    left: 50%;
+    bottom: 0; 
+    transform: translateX(-50%);
+    width: 50%;
+    border-bottom: 1px solid white; 
+  }
+
+.wrap input[type="submit"] {
+  padding: 9px 75px;
+  color: aliceblue;
+  background-color: gray;
+  border: none;
+  border-radius: 6px;
+  display: block;
+  margin: 30px auto;
+}
+.wrap input[type="text"],
+.wrap input[type="email"],
+.wrap input[type="password"],
+.wrap input[type="text"] {
+  margin-bottom: 20px;
+  padding: 5px 80px 5px 0;
+  border: 1px solid white;
+  border-radius: 5px;
+  border-color: white;
+  background-color: rgb(218, 233, 243);
+}
+
+.wrap dt {
+  font-size: 12px;
+  margin-left: 160px;
+  font-weight: bold;
+}
+
+.wrap dd {
+  margin-left: 160px;
+}
+
+.error-message {
+    color: red;  
+    font-size: 12px;
+    position: relative;
+    top: -20px;
+}
+
+.success-message {
+    color: green;
+    font-size: 12px; 
+    position: relative;
+    top: -20px;
+
+}
