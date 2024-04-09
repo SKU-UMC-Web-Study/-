@@ -4,6 +4,9 @@ const emailInput = document.getElementById("emailInput");
 const ageInput = document.getElementById("ageInput");
 const passwordInput = document.getElementById("passwordInput");
 const confirmPasswordInput = document.getElementById("confirmPasswordInput");
+const openButton = document.querySelector('.submit');
+const container = document.querySelector('.container');
+const closeButton = document.querySelector('.close');
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -88,9 +91,21 @@ function validateInputs() {
     setSuccess(confirmPasswordInput, "비밀번호가 일치합니다!");
 }
 
+
+
 if (isValid) {
-  alert("가입 성공!");
+    
+    openButton.addEventListener('click', () => {
+        container.style.display = 'flex';
+        openButton.style.display ='block';
+    })
+    
+    closeButton.addEventListener('click', () => {
+        container.style.display = 'none';
+        openButton.style.display ='flex';
+    })
 } else {
+
     alert("올바르게 입력하세요!");
     }
 }

@@ -21,7 +21,7 @@ body {
     width: 600px;
     border: 2px solid rgb(124, 218, 235);
     margin-top: 20px ;
-    
+   
 }
 
 #title {
@@ -44,12 +44,12 @@ body {
     justify-content: space-around;
     margin-top: 20px;
     
+    
 }
 
 #p1, #p2 {
    font-weight: bold;
     font-size: 15px;
-    
 }
 
 #p1 li {
