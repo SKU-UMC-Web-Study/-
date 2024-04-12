@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+
+
+
+
 
 function App() {
+  const [title, settitle] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          어쩔 <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div><h1>{title}</h1></div>
+      <button onClick={()=>{settitle(title+1)}}>+1</button>
+      <button onClick={()=>{settitle(title-1)}}>-1</button>
+      
+      
     </div>
   );
 }
