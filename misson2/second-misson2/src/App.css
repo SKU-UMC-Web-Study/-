@@ -14,27 +14,52 @@ body {
   align-items: center;
   margin: 10px;
   text-align: left;
+  position: relative;
 }
 
 img {
   width: 250px;
   height: auto;
-  
   border-radius: 6px;
 }
 
-img:hover {
-  background-color: black;
+.details {
+  color: white;
+  font-size: 15px;
+
 }
 
 .title {
   color: white;
-  background-color: rgb(106, 96, 249);
+  background-color: rgb(43, 36, 141);
   width: 100%;
   height: 100%;
   padding: 25px 0px;
-  
+  display: block;
   border: none;
   border-radius: 6px;
   font-size: 10px;
+  
+}
+
+.title:hover {
+  display: inline-block;
+}
+
+
+.movie .details {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.movie:hover .details {
+  display: block;
 }
