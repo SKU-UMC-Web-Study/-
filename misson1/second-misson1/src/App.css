@@ -27,11 +27,47 @@ body {
 
 #p1, #p2{
   font-weight: bold;
-  display: inline-block;
   border-bottom: 2px solid rgba(0,0,0,0.1);
   margin: 40px 100px;
-  ;
+  max-width: 1000px;
+  
+}
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  margin: 30px 50px;
+  padding-bottom: 10px;
+  width: 60%
+}
+
+.todo-list {
+  margin-top: 20px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 15px;
 
   
 }
 
+#finish {
+  font-weight: bold;
+  margin-left: 50px;
+  background:rgb(207, 232, 250);
+  border: none;
+  padding: 5px 5px;
+  border-radius: 2px;
+  width: 50%;
+  
+}
+
+#delete {
+  font-weight: bold;
+  margin-left: 50px;
+  background:rgb(207, 232, 250);
+  border: none;
+  padding: 5px 5px;
+  border-radius: 2px;
+  width: 50%;
+}
