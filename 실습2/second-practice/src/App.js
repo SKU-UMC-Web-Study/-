@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+import Modal from "./components/Modal"
 
 function App() {
   const [Open, setOpen] = useState(false);
@@ -28,16 +29,8 @@ function App() {
   );
 }
 
-function Modal({closeModal}) {
-  return (
-    <div className="container">
-      <div className="modal">
-        <p id="title">안녕하세요</p>
-        <p>모달 내용은 어쩌고 저쩌고...</p>
-        <button id="close" onClick={closeModal}>닫기</button>
-      </div>
-    </div>
-  );
-}
+<Modal/>
+
+
 
 export default App;
