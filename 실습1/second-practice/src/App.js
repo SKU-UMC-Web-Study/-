@@ -2,10 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
-
-
-
-
 function App() {
   const [title, settitle] = useState(0);
 
@@ -21,3 +17,4 @@ function App() {
 }
 
 export default App;
+
