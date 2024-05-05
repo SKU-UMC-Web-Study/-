@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const MovieList = styled.div`
   display: flex;
@@ -56,10 +57,12 @@ const UpComingPage = () => {
     <div>
       <MovieList>
         {movies.map((movie) => (
+            <Link key={movie.id} to={`/details/${movie.id}`}>
           <MovieItem key={movie.id}>
             <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
             <h3>{movie.title}</h3>
           </MovieItem>
+          </Link>
         ))}
       </MovieList>
     </div>

@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const MovieList = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   background-color: rgb(0,0,102);
-  
-  
 `;
 
 const MovieItem = styled.div`
   width: 200px;
-  border:  solid rgb(0,0,102);
+  border: solid rgb(0,0,102);
   padding: 0;
   border-radius: 10px;
   text-align: center;
   font-size: 9px;
   text-align: left;
-  color:white;
+  color: white;
 
   img {
     border-radius: 5px;
@@ -28,16 +27,15 @@ const MovieItem = styled.div`
     margin: 0;
     border-radius: 2px;
     padding-bottom: 40px;
-    padding-top:10px;
+    padding-top: 10px;
     background-color: rgb(51,51,102);
   }
-
-  
 `;
+
+const API_KEY = '215f09dabe10c24a540887f85a29f81f';
 
 const PopularPage = () => {
   const [movies, setMovies] = useState([]);
-  const API_KEY = '215f09dabe10c24a540887f85a29f81f'; 
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -56,10 +54,13 @@ const PopularPage = () => {
     <div>
       <MovieList>
         {movies.map((movie) => (
-          <MovieItem key={movie.id}>
-            <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
-            <h3>{movie.title}</h3>
-          </MovieItem>
+          // Link를 사용하여 영화 포스터를 클릭하면 상세 페이지로 이동합니다.
+          <Link key={movie.id} to={`/details/${movie.id}`}>
+            <MovieItem>
+              <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
+              <h3>{movie.title}</h3>
+            </MovieItem>
+          </Link>
         ))}
       </MovieList>
     </div>
