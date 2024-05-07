@@ -10,6 +10,7 @@ const MovieList = styled.div`
   background-color: rgb(0,0,102);
   
   
+  
 `;
 
 const MovieItem = styled.div`

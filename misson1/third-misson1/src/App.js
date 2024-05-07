@@ -76,8 +76,6 @@ const App = () => {
           <Route path="/top-rated" element={<TopRatedPage />} />
           <Route path="/upcoming" element={<UpComingPage />} />
           <Route path="/details/:movieId" element={<Details />} />
-          
-          {/* 잘못된 경로로 이동했을 때 NotFound 페이지를 보여주는 라우팅 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AppContainer>

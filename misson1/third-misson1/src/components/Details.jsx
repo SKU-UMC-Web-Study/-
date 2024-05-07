@@ -9,14 +9,14 @@ const Container = styled.div`
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 139, 0.6); /* 남색 배경색 및 투명도 설정 */
+  background-color: rgba(0, 0, 139, 0.6); 
   background-image: ${({ movie }) =>
     movie && movie.poster_path
       ? `url('https://image.tmdb.org/t/p/original${movie.poster_path}')`
       : ""};
-  background-blend-mode: overlay; /* 이미지와 배경색을 오버레이로 섞음 */
-  background-size: cover; /* 이미지를 컨테이너 크기에 맞게 조절 */
-  background-position: center; /* 이미지를 중앙에 배치 */
+  background-blend-mode: overlay; 
+  background-size: cover; 
+  background-position: center; 
 `;
 
 const Img = styled.div`
@@ -44,10 +44,9 @@ const Content = styled.div`
 `;
 
 const Details = () => {
-  const { movieId } = useParams(); // URL 경로에서 movieId를 가져옵니다.
+  const { movieId } = useParams(); 
   const [movie, setMovie] = useState(null);
-  const API_KEY = "215f09dabe10c24a540887f85a29f81f"; // API 키를 입력해야 합니다
-
+  const API_KEY = "215f09dabe10c24a540887f85a29f81f"; 
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
