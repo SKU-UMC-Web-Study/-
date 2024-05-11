@@ -46,7 +46,7 @@ const Content = styled.div`
 const Details = () => {
   const { movieId } = useParams(); // URL 경로에서 movieId를 가져옵니다.
   const [movie, setMovie] = useState(null);
-  const API_KEY = "215f09dabe10c24a540887f85a29f81f"; // API 키를 입력해야 합니다
+  const API_KEY = "api-key"; // API 키를 입력해야 합니다
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
