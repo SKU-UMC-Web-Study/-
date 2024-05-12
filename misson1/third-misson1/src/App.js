@@ -8,6 +8,10 @@ import TopRatedPage from './components/TopRatedPage';
 import UpComingPage from './components/UpComing';
 import Details from './components/Details';
 import NotFound from './components/NotFound';
+import Signup from './components/Signup';
+import Login from './components/Login';
+
+
 
 const AppContainer = styled.div`
   display: flex;
@@ -56,20 +60,20 @@ const App = () => {
           <ul>
             <li><StyledLink to="/">UMC Movie</StyledLink></li>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <li>
-                <StyledLink onClick={handleLoginToggle}>
-                  {isLoggedIn ? '로그아웃' : '로그인'}
-                </StyledLink>
-              </li>
+
+              <li><StyledLink to="/signup">회원가입</StyledLink></li>
               <li><StyledLink to="/popular">Popular</StyledLink></li>
               <li><StyledLink to="/now-playing">Now Playing</StyledLink></li>
               <li><StyledLink to="/top-rated">Top Rated</StyledLink></li>
               <li><StyledLink to="/upcoming">Upcoming</StyledLink></li>
+  
             </div>
           </ul>
         </Navbar>
 
         <Routes>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<Signup/>}/>
           <Route path="/" element={<MainPage />} />
           <Route path="/popular" element={<PopularPage />} />
           <Route path="/now-playing" element={<NowPlayingPage />} />
