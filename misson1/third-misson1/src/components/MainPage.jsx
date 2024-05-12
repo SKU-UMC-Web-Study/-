@@ -69,7 +69,7 @@ const MainPage = () => {
 
   const handleSearch = async () => {
     if (searchTerm.trim() === "") return;
-    const apiKey = "215f09dabe10c24a540887f85a29f81f";
+    const apiKey = "api-key";
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchTerm}`;
     try {
       const response = await fetch(url);
